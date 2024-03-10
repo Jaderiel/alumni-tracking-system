@@ -21,18 +21,20 @@
         <div class="h-screen flex justify-center items-center">
             <div class=" bg-white rounded-3xl">
                 <div class="p-10">
-                    <h1 class="p-2 flex justify-center text-2xl font-bold">Sign In</h1>
+                    <h1 class="p-2 flex justify-center text-2xl font-bold">Sign Up</h1>
                     
-                        <form action="" class="flex flex-col gap-2 p-2">
-                            
-                                <input type="text" placeholder="Username" class="bg-slate-300 p-2 text-sm rounded-sm w-96">
-                                <input type="password" placeholder="Password" class="bg-slate-300 p-2 text-sm rounded-sm">
-                                <input type="password" placeholder="Confirm Password" class="bg-slate-300 p-2 text-sm rounded-sm">
+                        <form action="{{route('register-user')}}" method="post" class="flex flex-col gap-2 p-2">
+                                @csrf
+                                <input type="text" name="username" value="{{old('username')}}" placeholder="Username" class="bg-slate-300 p-2 text-sm rounded-sm">
+                                <span class="text-red-600 text-xs">@error('username') {{$message}} @enderror</span>
+                                <input type="text" name="email" value="{{old('email')}}" placeholder="Email" class="bg-slate-300 p-2 text-sm rounded-sm w-96">
+                                <span class="text-red-600 text-xs">@error('email') {{$message}} @enderror</span>
+                                <input type="password" name="password" value="{{old('password')}}" placeholder="Password" class="bg-slate-300 p-2 text-sm rounded-sm">
+                                <span class="text-red-600 text-xs">@error('password') {{$message}} @enderror</span>
                                 <button class="bg-custom-yellow rounded-full p-2 mt-6 mb-6 text-white w-52 self-center">SIGN UP</button>
                             
                         </form>
                     
-                    <p class="flex justify-center text-xs pb-4">Forgot Password?</p>
                     <p class="flex justify-center text-xs">Already Have an Account? <strong class="hover:cursor-pointer">Sign In here</strong></p>
                 </div>
             </div>

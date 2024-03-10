@@ -27,7 +27,7 @@
                             
                                 <input type="text" placeholder="Username" class="bg-slate-300 p-2 text-sm rounded-sm w-96">
                                 <input type="password" placeholder="Password" class="bg-slate-300 p-2 text-sm rounded-sm">
-                                <button class="bg-custom-yellow rounded-full p-2 mt-6 mb-6 text-white w-52 self-center">SIGN IN</button>
+                                <button type="submit" class="bg-custom-yellow rounded-full p-2 mt-6 mb-6 text-white w-52 self-center">SIGN IN</button>
                             
                         </form>
                     
