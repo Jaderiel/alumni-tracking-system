@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Hash;
 
 class customAuthController extends Controller
 {
@@ -25,7 +26,7 @@ class customAuthController extends Controller
         $users = new User();
         $users -> username = $request -> username;
         $users -> email = $request -> email;
-        $users -> password = $request -> password;
+        $users -> password = Hash::make($request -> password);
         $res = $users -> save();
 
         if($res) {
