@@ -15,18 +15,29 @@
             <div class="form-wrapper align-items-center">
                 <div class="form sign-up">
                     <h1>Create Account</h1>
+                    <form action="{{route('register-user')}}" method="post">
+                        @if(Session::has('success'))
+                        <div>{{Session::get('success')}}</div>
+                        @endif
+                        @if(Session::has('fail'))
+                        <div>{{Session::get('fail')}}</div>
+                        @endif
+                        @csrf
                     <div class="input-group">
-                        <input type="text" placeholder="First Name">
+                        <input type="text" placeholder="First Name" name="firstName" value="">
+                        <span class="text-red-600 text-xs">@error('firstName') {{$message}} @enderror</span>
                     </div>
                     <div class="input-group">
-                        <input type="text" placeholder="Middle Name">
+                        <input type="text" placeholder="Middle Name" name="middleName" value="">
+                        <span class="text-red-600 text-xs">@error('middleName') {{$message}} @enderror</span>
                     </div>
                     <div class="input-group">
-                        <input type="text" placeholder="Last Name">
+                        <input type="text" placeholder="Last Name" name="lastName" value="">
+                        <span class="text-red-600 text-xs">@error('lastName') {{$message}} @enderror</span>
                     </div>
                     <div class="sign-upp">
                     <div class="input-group">
-                        <select name="course" id="course">
+                        <select name="course" id="course" value="">
                             <option value="" selected disabled>Course</option>
                             <option value="course1">Bachelor of Arts in Broadcasting (BAB)</option>
                             <option value="course2">Bachelor of Science in Accountancy (BSA)</option>
@@ -41,9 +52,10 @@
                             <option value="course11">Nursing Student (NS)</option>
                             <option value="course12">Office Management (OM)</option>
                         </select>
+                        <span class="text-red-600 text-xs">@error('course') {{$message}} @enderror</span>
                     </div>
                     <div class="input-group">
-                        <select name="batch" id="batch">
+                        <select name="batch" id="batch" value="">
                             <option value="" selected disabled>Batch</option>
                             <option value="batch1">2006</option>
                             <option value="batch2">2007</option>
@@ -64,20 +76,24 @@
                             <option value="batch17">2022</option>
                             <option value="batch18">2023</option>
                         </select>
+                        <span class="text-red-600 text-xs">@error('batch') {{$message}} @enderror</span>
                     </div>
                     </div>
                     <div class="input-group">
-                        <input type="email" placeholder="Email">
+                        <input type="email" placeholder="Email" name="email" value="">
+                        <span class="text-red-600 text-xs">@error('email') {{$message}} @enderror</span>
                     </div>
                     <div class="input-group">
-                        <input type="text" placeholder="Username">
+                        <input type="text" placeholder="Username" name="username" value="">
+                        <span class="text-red-600 text-xs">@error('username') {{$message}} @enderror</span>
                     </div>
                     <div class="sign-uppp">
                     <div class="input-group">
-                        <input type="password" placeholder="Password">
+                        <input type="password" placeholder="Password" name="password" value="">
+                        <span class="text-red-600 text-xs">@error('password') {{$message}} @enderror</span>
                     </div>
                     <div class="input-group">
-                        <input type="password" placeholder="Confirm password">
+                        <input type="password" placeholder="Confirm password" name="confirm-password" value="">
                     </div>
                     </div>
                     
@@ -87,6 +103,7 @@
                     </div>
                     <br>
                     <button type="submit" class="btn" onclick="openPopup()">SIGN UP</button>
+                    </form>
                     
                     <p>
                         <span>
@@ -104,16 +121,16 @@
             <div class="form-wrapper align-items-center">
                 <div class="form sign-in">
                     <h1>Sign in</h1>
-                    <div class="input-group">
-                        <i class='bx bxs-user'></i>
-                        <input type="text" placeholder="Username">
-                    </div>
-                    <div class="input-group">
-                        <i class='bx bxs-lock-alt'></i>
-                        <input type="password" placeholder="Password">
-                    </div>
-                    <br>
-                    <form action="dashboard.html">
+                    <form>
+                        <div class="input-group">
+                            <i class='bx bxs-user'></i>
+                            <input type="text" placeholder="Username" name="username" value="">
+                        </div>
+                        <div class="input-group">
+                            <i class='bx bxs-lock-alt'></i>
+                            <input type="password" placeholder="Password" name="password" value="">
+                        </div>
+                        <br>
                         <button type="submit">SIGN IN</button>
                     </form>
                     <p>

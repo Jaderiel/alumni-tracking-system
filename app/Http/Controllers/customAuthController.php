@@ -19,12 +19,22 @@ class customAuthController extends Controller
 
     public function registerUser(Request $request) {
         $request -> validate([
+            'firstName' => 'required',
+            'middleName' => 'required',
+            'lastName' => 'required',
+            'course' => 'required',
+            'batch' => 'required',
             'username' => 'required',
             'email' => 'required|email|unique:users',
             'password' => 'required|min:5|max:12',
         ]);
 
         $users = new User();
+        $users -> firstName = $request -> firstName;
+        $users -> middleName = $request -> middleName;
+        $users -> lastName = $request -> lastName;
+        $users -> course = $request -> course;
+        $users -> batch = $request -> batch;
         $users -> username = $request -> username;
         $users -> email = $request -> email;
         $users -> password = Hash::make($request -> password);
