@@ -121,14 +121,23 @@
             <div class="form-wrapper align-items-center">
                 <div class="form sign-in">
                     <h1>Sign in</h1>
-                    <form>
+                    <form action="{{route('login-user')}}" method="post">
+                    @if(Session::has('success'))
+                    <div>{{Session::get('success')}}</div>
+                    @endif
+                    @if(Session::has('fail'))
+                    <div>{{Session::get('fail')}}</div>
+                    @endif
+                    @csrf
                         <div class="input-group">
                             <i class='bx bxs-user'></i>
                             <input type="text" placeholder="Username" name="username" value="">
+                            <span class="text-red-600 text-xs">@error('email') {{$message}} @enderror</span>
                         </div>
                         <div class="input-group">
                             <i class='bx bxs-lock-alt'></i>
                             <input type="password" placeholder="Password" name="password" value="">
+                            <span class="text-red-600 text-xs">@error('password') {{$message}} @enderror</span>
                         </div>
                         <br>
                         <button type="submit">SIGN IN</button>

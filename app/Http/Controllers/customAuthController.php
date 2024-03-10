@@ -49,10 +49,10 @@ class customAuthController extends Controller
 
     public function loginUser(Request $request) {
         $request -> validate([
-            'email' => 'required|email',
+            'username' => 'required',
             'password' => 'required|min:5|max:12',
         ]);
-        $user = User::where('email', '=', $request->email)->first();
+        $user = User::where('username', '=', $request->username)->first();
         if($user) {
             if (Hash::check($request->password, $user->password)) {
                 $request -> session() -> put('loginId', $user->id);
@@ -61,7 +61,7 @@ class customAuthController extends Controller
                 return back()->with('fail', 'Password not matched');
             }
         } else {
-            return back()->with('fail', 'This email is not registered.');
+            return back()->with('fail', 'This user is not registered.');
         }
     }
 
