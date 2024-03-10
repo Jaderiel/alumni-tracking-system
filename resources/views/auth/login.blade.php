@@ -23,10 +23,18 @@
                 <div class="p-10">
                     <h1 class="p-2 flex justify-center text-2xl font-bold">Sign In</h1>
                     
-                        <form action="" class="flex flex-col gap-2 p-2">
-                            
-                                <input type="text" placeholder="Username" class="bg-slate-300 p-2 text-sm rounded-sm w-96">
-                                <input type="password" placeholder="Password" class="bg-slate-300 p-2 text-sm rounded-sm">
+                        <form action="{{route('login-user')}}" method="post" class="flex flex-col gap-2 p-2">
+                                @if(Session::has('success'))
+                                <div>{{Session::get('success')}}</div>
+                                @endif
+                                @if(Session::has('fail'))
+                                <div>{{Session::get('fail')}}</div>
+                                @endif
+                                @csrf
+                                <input type="text" name="email" value="{{old('email')}}" placeholder="Email" class="bg-slate-300 p-2 text-sm rounded-sm w-96">
+                                <span class="text-red-600 text-xs">@error('email') {{$message}} @enderror</span>
+                                <input type="password" name="password" value="{{old('password')}}" placeholder="Password" class="bg-slate-300 p-2 text-sm rounded-sm">
+                                <span class="text-red-600 text-xs">@error('password') {{$message}} @enderror</span>
                                 <button type="submit" class="bg-custom-yellow rounded-full p-2 mt-6 mb-6 text-white w-52 self-center">SIGN IN</button>
                             
                         </form>
