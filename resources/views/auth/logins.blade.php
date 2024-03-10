@@ -39,42 +39,42 @@
                     <div class="input-group">
                         <select name="course" id="course" value="">
                             <option value="" selected disabled>Course</option>
-                            <option value="course1">Bachelor of Arts in Broadcasting (BAB)</option>
-                            <option value="course2">Bachelor of Science in Accountancy (BSA)</option>
-                            <option value="course3">BSA Technology (BSAT) | BSA Information Systems (BSAIS)</option>
-                            <option value="course4">Bachelor of Science in Social Work (BSSW)</option>
-                            <option value="course5">Bachelor of Science in Information Systems (BSIS)</option>
-                            <option value="course6">Computer Technology (CT)</option>
-                            <option value="course7">Computer Programming (CP)</option>
-                            <option value="course8">Health Care Services (HCS)</option>
-                            <option value="course9">International Cookery (IC)</option>
-                            <option value="course10">Mass Communication (MC)</option>
-                            <option value="course11">Nursing Student (NS)</option>
-                            <option value="course12">Office Management (OM)</option>
+                            <option value="Bachelor of Arts in Broadcasting">Bachelor of Arts in Broadcasting (BAB)</option>
+                            <option value="Bachelor of Science in Accountancy">Bachelor of Science in Accountancy (BSA)</option>
+                            <option value="BSA Technology (BSAT) | BSA Information Systems">BSA Technology (BSAT) | BSA Information Systems (BSAIS)</option>
+                            <option value="Bachelor of Science in Social Work">Bachelor of Science in Social Work (BSSW)</option>
+                            <option value="Bachelor of Science in Information Systems">Bachelor of Science in Information Systems (BSIS)</option>
+                            <option value="Computer Technology">Computer Technology (CT)</option>
+                            <option value="Computer Programming">Computer Programming (CP)</option>
+                            <option value="Health Care Services">Health Care Services (HCS)</option>
+                            <option value="International Cookery">International Cookery (IC)</option>
+                            <option value="Mass Communication">Mass Communication (MC)</option>
+                            <option value="Nursing Student">Nursing Student (NS)</option>
+                            <option value="Office Management">Office Management (OM)</option>
                         </select>
                         <span class="text-red-600 text-xs">@error('course') {{$message}} @enderror</span>
                     </div>
                     <div class="input-group">
                         <select name="batch" id="batch" value="">
                             <option value="" selected disabled>Batch</option>
-                            <option value="batch1">2006</option>
-                            <option value="batch2">2007</option>
-                            <option value="batch3">2008</option>
-                            <option value="batch4">2009</option>
-                            <option value="batch5">2010</option>
-                            <option value="batch6">2011</option>
-                            <option value="batch7">2012</option>
-                            <option value="batch8">2013</option>
-                            <option value="batch9">2014</option>
-                            <option value="batch10">2015</option>
-                            <option value="batch11">2016</option>
-                            <option value="batch12">2017</option>
-                            <option value="batch13">2018</option>
-                            <option value="batch14">2019</option>
-                            <option value="batch15">2020</option>
-                            <option value="batch16">2021</option>
-                            <option value="batch17">2022</option>
-                            <option value="batch18">2023</option>
+                            <option value="2006">2006</option>
+                            <option value="2007">2007</option>
+                            <option value="2008">2008</option>
+                            <option value="2009">2009</option>
+                            <option value="2010">2010</option>
+                            <option value="2011">2011</option>
+                            <option value="2012">2012</option>
+                            <option value="2013">2013</option>
+                            <option value="2014">2014</option>
+                            <option value="2015">2015</option>
+                            <option value="2016">2016</option>
+                            <option value="2017">2017</option>
+                            <option value="2018">2018</option>
+                            <option value="2019">2019</option>
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
                         </select>
                         <span class="text-red-600 text-xs">@error('batch') {{$message}} @enderror</span>
                     </div>
