@@ -24,6 +24,12 @@
                     <h1 class="p-2 flex justify-center text-2xl font-bold">Sign Up</h1>
                     
                         <form action="{{route('register-user')}}" method="post" class="flex flex-col gap-2 p-2">
+                                @if(Session::has('success'))
+                                <div>{{Session::get('success')}}</div>
+                                @endif
+                                @if(Session::has('fail'))
+                                <div>{{Session::get('fail')}}</div>
+                                @endif
                                 @csrf
                                 <input type="text" name="username" value="{{old('username')}}" placeholder="Username" class="bg-slate-300 p-2 text-sm rounded-sm">
                                 <span class="text-red-600 text-xs">@error('username') {{$message}} @enderror</span>
