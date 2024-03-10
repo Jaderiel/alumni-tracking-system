@@ -66,7 +66,7 @@ class customAuthController extends Controller
     }
 
     public function dashboard() {
-        return "Welcome to Dashboard";
+        return view("pages.dashboard");
     }
 
     public function logins() {
