@@ -1,11 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  @vite('resources/css/app.css')
 </head>
 <body>
-    
+  <h1 class="text-3xl font-bold text-orange-500">
+    Register
+  </h1>
 </body>
 </html>
