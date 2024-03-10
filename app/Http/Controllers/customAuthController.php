@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 class customAuthController extends Controller
 {
     public function login() {
-        return "Login";
+        return view("auth.login");
     }
 
     public function registration() {
-        return "Register";
+        return view("auth.registration");
     }
 }
