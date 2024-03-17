@@ -5,11 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Page</title>
+    <title>Events Page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="events.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    @vite('resources/css/dashboard.css')
 </head>
 
 <body>
@@ -19,14 +18,14 @@
         </div>
 
         <div class="items">
-            <li><i class="fa-solid fa-house"></i><a href="dashboard">Dashboard</a></li>
-            <li><i class="fa-solid fa-users"></i><a href="alumni-list.html">Alumni List</a></li>
-            <li><i class="fa-solid fa-calendar-days"></i><a href="events.html">Events</a></li>
-            <li><i class="fa-solid fa-briefcase"></i><a href="jobs.html">Jobs</a></li>
-            <li><i class="fa-solid fa-image"></i><a href="gallery.html">Gallery</a></li>
-            <li><i class="fa-solid fa-chart-line"></i><a href="analytics.html">Analytics</a></li><br><br><br><br>
-            <li><i class="fa-solid fa-user-gear"></i><a href="profile.html">Profile</a></li>
-            <li><i class="fa-solid fa-right-from-bracket"></i><a href="login.html">Logout</a></li>
+            <li><i class="fa-solid fa-house"></i><a href="./dashboard.html">Dashboard</a></li>
+            <li><i class="fa-solid fa-users"></i><a href="./alumni-list.html">Alumni List</a></li>
+            <li><i class="fa-solid fa-calendar-days"></i><a href="./events.html">Events</a></li>
+            <li><i class="fa-solid fa-briefcase"></i><a href="./jobs.html">Jobs</a></li>
+            <li><i class="fa-solid fa-image"></i><a href="./gallery.html">Gallery</a></li>
+            <li><i class="fa-solid fa-chart-line"></i><a href="./analytics.html">Analytics</a></li><br><br><br><br>
+            <li><i class="fa-solid fa-user-gear"></i><a href="./profile.html">Profile</a></li>
+            <li><i class="fa-solid fa-right-from-bracket"></i><a href="#">Logout</a></li>
         </div>
     </section>
 
@@ -41,92 +40,14 @@
         </div>
 
         <h3 class="i-name">
-            Dashboard
+            Events & Announcements
         </h3>
-        <p class="i-nameee">Welcome back, [Admin!]</p>
-        <div class="values">
-            <div class="val-box">
-                <i class="fa-solid fa-briefcase"></i>
-                <div>
-                    <h3>20</h3>
-                    <span>Job Post</span>
-                </div>
-            </div>
-            <div class="val-box">
-                <i class="fa-solid fa-calendar-days"></i>
-                <div>
-                    <h3>10</h3>
-                    <span>Events</span>
-                </div>
-            </div>
-            <div class="val-box">
-                <i class="fa-solid fa-users"></i>
-                <div>
-                    <h3>800</h3>
-                    <span>Alumni</span>
-                </div>
-            </div>
+        
+        <div class="box">
+            <p>Upcoming Events & Announcements</p>
         </div>
 
-        <div class="board">
-            <div class="board-1">
-                <table width="100%">
-                    <thead>
-                        <tr>
-                            <td><br></td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><br><br><br><br><br><br><br><br><br><br><br></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="board-2">
-                <table width="100%">
-                    <thead>
-                        <tr>
-                            <td>Upcoming Events</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="event">
-                                <i class="fa-regular fa-file"></i>
-                                    <div>
-                                        <h3>Jade Riel Abuela</h3>
-                                        <p>Bachelor of Science in Information Systems</p>
-                                    </div>                         
-                            </td>
-                            <td class="event">
-                                <i class="fa-regular fa-file"></i>
-                                    <div>
-                                        <h3>Jade Riel Abuela</h3>
-                                        <p>Bachelor of Science in Information Systems</p>
-                                    </div>                         
-                            </td>
-                            <td class="event">
-                                <i class="fa-regular fa-file"></i>
-                                    <div>
-                                        <h3>Jade Riel Abuela</h3>
-                                        <p>Bachelor of Science in Information Systems</p>
-                                    </div>                         
-                            </td>
-                            <td class="event">
-                                <i class="fa-regular fa-file"></i>
-                                    <div>
-                                        <h3>Jade Riel Abuela</h3>
-                                        <p>Bachelor of Science in Information Systems</p>
-                                    </div>                         
-                            </td>
-                        
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
+            </section>
 
     <script>
         $('#menu-btn').click(function(){
@@ -250,24 +171,17 @@ body {
     font-size: 15px;
 }
 
-.values{
-    padding: 30px 30px 30px;
-    display: flex;
-    gap: 30px;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.values .val-box{
-    background: #fff;
-    width: 235px;
-    padding: 10px 10px;
+.box {
+    background: #E8C766;
+    width: 27%;
     border-radius: 5px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.288);
-}
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+    padding: 8px;
+    margin: 40px 30px;
+    border: 1px solid #2D55B4;
+    }
 
 .values .val-box i{
     font-size: 25px;
@@ -297,6 +211,17 @@ body {
 }
 
 .board-1 {
+  width: 450px;
+  height: 250px;
+  background-color: #fff;
+  background: linear-gradient(#f8f8f8, #fff);
+  box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  margin: 1.5rem;}
+
+.board-2 {
     width: 60%;
     margin-left: 30px;
     overflow: auto;
@@ -305,7 +230,7 @@ body {
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.288); 
 }
 
-.board-2 {
+.board-3 {
     width: 30%;
     margin-right: 30px;
     overflow: auto;
@@ -329,6 +254,15 @@ table{
 
 .board-2 thead td{
     font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 400;
+    background: #162F65;
+    text-align: center;
+    padding: 10px;
+}
+
+.board-3 thead td{
+    font-size: 14px;
     font-weight: 600;
     text-align: center;
     padding: 10px;
@@ -339,25 +273,25 @@ tbody tr td{
     padding: 10px 15px;
 }
 
-.board-2 h3{
+.board-3 h3{
     font-weight: 500;
     font-size: 13px;
     margin-left: 15px;
 }
 
-.board-2 p{
+.board-3 p{
     font-weight: 400;
     font-size: 10px;
     color: #ABAEB7;
     margin-left: 15px;
 }
 
-.board-2 .event{
+.board-3 .event{
     display: flex;
     justify-content: flex-start;
 }
 
-.board-2 .event i{
+.board-3 .event i{
     font-size: 20px;
     width: 30px;
     height: 35px;

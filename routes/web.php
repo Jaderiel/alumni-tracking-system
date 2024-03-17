@@ -24,3 +24,6 @@ Route::post('/register-user', [customAuthController::class, 'registerUser'])->na
 Route::post('/login-user', [customAuthController::class, 'loginUser'])->name('login-user');
 Route::get('/dashboard', [customAuthController::class, 'dashboard']);
 Route::get('/logins', [customAuthController::class,'logins']);
+Route::get('/alumni-list', [customAuthController::class, 'alumniList']);
+Route::get('/events', [customAuthController::class, 'events']);
+Route::get('/profile', [customAuthController::class, 'profile']);

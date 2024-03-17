@@ -72,4 +72,16 @@ class customAuthController extends Controller
     public function logins() {
         return view("auth.logins");
     }
+
+    public function alumniList() {
+        return view("pages.alumni-list");
+    }
+
+    public function events() {
+        return view("pages.events");
+    }
+
+    public function profile() {
+        return view("pages.profile");
+    }
 }
