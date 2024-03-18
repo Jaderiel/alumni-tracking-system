@@ -84,4 +84,8 @@ class customAuthController extends Controller
     public function profile() {
         return view("pages.profile");
     }
+
+    public function gallery() {
+        return view("pages.gallery");
+    }
 }

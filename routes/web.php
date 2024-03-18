@@ -27,3 +27,4 @@ Route::get('/logins', [customAuthController::class,'logins']);
 Route::get('/alumni-list', [customAuthController::class, 'alumniList']);
 Route::get('/events', [customAuthController::class, 'events']);
 Route::get('/profile', [customAuthController::class, 'profile']);
+Route::get('/gallery', [customAuthController::class, 'gallery']);
