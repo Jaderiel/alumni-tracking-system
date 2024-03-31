@@ -28,3 +28,4 @@ Route::get('/alumni-list', [customAuthController::class, 'alumniList']);
 Route::get('/events', [customAuthController::class, 'events']);
 Route::get('/profile', [customAuthController::class, 'profile']);
 Route::get('/gallery', [customAuthController::class, 'gallery']);
+Route::post('/logoutUser', [customAuthController::class, 'logoutUser'])->name('logoutUser');

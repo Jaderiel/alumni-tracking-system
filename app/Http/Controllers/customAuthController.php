@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Hash;
 use Session;
+use Illuminate\Support\Facades\Auth;
+
 
 class customAuthController extends Controller
 {
@@ -87,5 +89,11 @@ class customAuthController extends Controller
 
     public function gallery() {
         return view("pages.gallery");
+    }
+
+    public function logoutUser() {
+        Auth::logout();
+
+        return redirect()->route('logins');
     }
 }
